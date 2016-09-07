@@ -1,0 +1,87 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EndLotOnMachActivity" >
+
+    <fragment
+        android:id="@+id/end_lot_on_mach_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/end_lot_on_mach_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/end_lot_on_mach_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:padding="6dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linear_layout_line"
+                android:orientation="horizontal"
+                android:padding="6dp" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mach_ID"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/end_lot_on_mach_mach_ID"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/pls_select"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/end_lot_on_mach_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="6dp" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <Button
+                android:id="@+id/end_lot_on_mach_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_submit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/end_lot_on_mach_lot_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_lot_on_mach_ll1"
+            android:layout_above="@id/end_lot_on_mach_ll3"
+            android:orientation="vertical"
+            android:padding="6dp" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</merge>

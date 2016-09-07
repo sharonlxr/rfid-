@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dip" >
+
+    <TextView
+        android:id="@+id/lot_carrier_tracking_deassign_name"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:textColor="#004080"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:background="#004080" />
+
+    <TextView
+        android:id="@+id/lot_carrier_tracking_deassign_submit"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:text="@string/deassign"
+        android:layout_marginStart="2dip"
+        android:layout_marginLeft="2dip" />
+
+    <ImageView
+        android:id="@+id/lot_carrier_tracking_deassign_done"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/button_done"
+        android:src="@drawable/success" />
+
+</LinearLayout>

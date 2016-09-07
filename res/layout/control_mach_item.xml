@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:gravity="center_horizontal"
+    android:background="@drawable/control_mach_normal_item" >
+
+    <!-- LinearLayout
+        android:id="@+id/control_mach_item_ll"
+    	android:background="@drawable/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dip"  -->
+
+        <TextView
+            android:id="@+id/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="@string/acknowledge"
+            android:textColor="@color/bg_white" />
+
+</RelativeLayout>

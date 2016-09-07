@@ -1,0 +1,161 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LotStartActivity" >
+
+    <fragment
+        android:id="@+id/start_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/start_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/lot_start_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mach_assign" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lot_start_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lot_start_ll1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mach" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lot_start_assigned_mach_list"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/lot_start_ll2" />
+
+        <LinearLayout
+            android:id="@+id/lot_start_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lot_start_assigned_mach_list"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/piece_part_device" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lot_start_pp_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/lot_start_ll3" />
+
+        <LinearLayout
+            android:id="@+id/lot_start_ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lot_start_pp_device_list"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/currently_loaded_to_mach" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lot_start_ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/lot_start_start"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_start" />
+
+                <Button
+                    android:id="@+id/lot_start_add_pp"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_add_pp" />
+
+                <Button
+                    android:id="@+id/lot_start_cancel"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lot_start_currently_loaded"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_above="@id/lot_start_ll5"
+            android:layout_below="@id/lot_start_ll4" >
+        </ListView>
+    </RelativeLayout>
+
+</merge>

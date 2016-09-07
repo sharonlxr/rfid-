@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="title_activity_op_shift_mach_assign">开班添加机台</string>
+    <string name="action_assign"><b>加载</b></string>
+    <string name="assign_progress_assigning">Loading&#8230;</string>
+    <string name="mach_type">机台类型</string>
+    <string name="loc_code">机台位置</string>
+    <string name="mach_ID">机台ID</string>
+    <string name="add_mach"><b>添加机台</b></string>
+    <string name="add_hist_mach"><b>历史记录</b></string>
+
+</resources>

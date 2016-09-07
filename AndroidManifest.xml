@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fsl.cimei.rfid"
+    android:versionCode="76"
+    android:versionName="2.3.76" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/ -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name=".GlobalVariable"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+        activity
+            android:name="com.fsl.cimei.rfid.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+        </activity
+        -->
+        <activity
+            android:name=".ControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MsgReceiveService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.MsgReceiveService" />
+            </intent-filter>
+        </service>
+        <!--
+        service
+            android:name=".MsgReceiveService1"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.MsgReceiveService1" />
+            </intent-filter>
+        </service
+        -->
+        <service
+            android:name=".MsgReceiveService2"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.MsgReceiveService2" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MsgReceiveService3"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.MsgReceiveService3" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MsgReceiveService4"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.MsgReceiveService4" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".WifiCheckService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.WifiCheckService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".OpShiftMachAssignActivity"
+            android:label="@string/title_activity_op_shift_mach_assign" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".RejActivity"
+            android:label="@string/title_activity_rej" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <!--
+        activity
+            android:name=".NFCTagEventActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/title_activity_RFID_event"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity
+        -->
+        <activity
+            android:name=".LotInquiryActivity"
+            android:label="@string/title_activity_lot_inquiry"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryStepHistActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryMachInfoActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryWaferInfoActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryDieReliefActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryWaferIDUsageActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryMemoActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryMemoHistoryActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryReasonHistActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryFutureHoldSettingActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryContainerIDUsageActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquirySPVInfoActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryCPKDataActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotInquiryCarrierUsageActivity"
+            android:label="@string/title_activity_lot_inquiry" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotInquiryActivity" />
+        </activity>
+        <activity
+            android:name=".LotStartActivity"
+            android:label="@string/title_activity_lot_start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".SPVMemoAcknowledgeActivity"
+            android:label="@string/title_activity_spv_memo_acknowledge" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".RackMgmtActivity"
+            android:label="@string/title_activity_rack_mgmt"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotStartSelectMachActivity"
+            android:label="@string/title_activity_lot_start_select_mach_activity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotStartActivity" />
+        </activity>
+        <activity
+            android:name=".EmtLogActivity"
+            android:label="@string/title_activity_emt_log"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".PiecePartLoadActivity"
+            android:label="@string/title_activity_piece_part_load" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".PiecePartOptionsActivity"
+            android:label="@string/title_activity_piece_part_options" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.PiecePartLoadActivity" />
+        </activity>
+        <activity
+            android:name=".PiecePartUnloadActivity"
+            android:label="@string/title_activity_piece_part_unload" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".MachRFIDFunctionActivity"
+            android:label="@string/title_activity_mach_rfid_function" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".CarrierAssignActivity"
+            android:label="@string/title_activity_carrier_assign"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_message" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".EndLotOnMachActivity"
+            android:label="@string/title_activity_end_lot_on_mach" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".AppInfoActivity"
+            android:label="@string/title_activity_app_info" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".InOutCarrierAssignmentActivity"
+            android:label="@string/title_activity_in_out_carrier_assignment"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".NewNFCTagActivity"
+            android:label="@string/app_name"
+            android:theme="@style/dTheme" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EndLotActivity"
+            android:label="@string/title_activity_end_lot"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".WifiConfigActivity"
+            android:label="@string/title_activity_wifi_config"
+            android:launchMode="singleTask" >
+
+            <!--
+                 meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" /
+            -->
+        </activity>
+        <activity
+            android:name=".CheckMagazineActivity"
+            android:label="@string/title_activity_check_magazine"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+
+        <service
+            android:name=".NFCService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.fsl.cimei.rfid.NFCService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".CassetteActivity"
+            android:label="@string/title_activity_cassette"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".RejMagActivity"
+            android:label="@string/title_activity_rej_mag"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".StripInspectionActivity"
+            android:label="@string/title_activity_strip_inspection"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotCarrierHistActivity"
+            android:label="@string/title_activity_lot_carrier_hist"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotCarrierReportActivity"
+            android:label="@string/title_activity_lot_carrier_report"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.AppInfoActivity" />
+        </activity>
+        <activity
+            android:name=".DivLotActivity"
+            android:label="@string/title_activity_div_lot"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".DivLotProgressActivity"
+            android:label="@string/title_activity_div_lot"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.DivLotActivity" />
+        </activity>
+        <activity
+            android:name=".LotRackActivity"
+            android:label="@string/title_activity_lot_rack_mgmt"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".PassWindowActivity"
+            android:label="@string/title_activity_pass_window"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".MessageTestActivity"
+            android:label="@string/title_activity_message_test"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".AlarmUnsetActivity"
+            android:label="@string/title_activity_alarm_unset"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotPassWindowActivity"
+            android:label="@string/title_activity_lot_pass_window"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".CassetteAssignActivity"
+            android:label="@string/title_activity_cassette_assign"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotCarrierTrackingActivity"
+            android:label="@string/title_activity_lot_carrier_tracking"
+            android:launchMode="singleTask" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.ControlActivity" />
+        </activity>
+        <activity
+            android:name=".LotCarrierTrackingDeassignActivity"
+            android:label="@string/title_activity_lot_carrier_tracking_deassign" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fsl.cimei.rfid.LotCarrierTrackingActivity" />
+        </activity>
+    </application>
+
+</manifest>

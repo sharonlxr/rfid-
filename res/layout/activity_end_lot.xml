@@ -1,0 +1,226 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".EndLotActivity" >
+
+    <fragment
+        android:id="@+id/end_lot_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/end_lot_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/end_lot_title_lot_number"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="1"
+                    android:text="@string/title_lot_number" />
+
+                <TextView
+                android:id="@+id/end_lot_lot_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/end_lot_title_lot_number"
+                android:layout_alignBottom="@id/end_lot_title_lot_number"
+                android:layout_marginLeft="4dip"
+                android:text="display current lot number in here"
+                android:textColor="#A8A8A8">
+                
+                <EditText
+                    android:id="@+id/end_lot_input"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/tag_or_lot"
+                    android:imeActionId="@+id/end_lot_search_t"
+                    android:imeActionLabel="@string/search"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/end_lot_n7_scan_barcode"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scan_barcode"
+                    android:visibility="gone" />
+            </LinearLayout>-->
+
+            <fragment
+                android:id="@+id/end_lot_tb_fragment"
+                android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/end_lot_current_qty" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="2dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_current_mach_info" />
+
+            <TextView
+                android:id="@+id/end_lot_mach_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- android:minHeight="?android:attr/listPreferredItemHeight" -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_current_carrier_info" />
+
+            <TextView
+                android:id="@+id/end_lot_carrier_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- android:minHeight="?android:attr/listPreferredItemHeight" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <!-- TextView
+                    android:id="@+id/end_lot_title_missing_carrier_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginTop="6dip"
+                    android:text="@string/prompt_missing_carrier_num_spinner" />
+
+                <Spinner
+                    android:id="@+id/end_lot_missing_carrier_num_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dip"
+                    android:layout_toRightOf="@id/end_lot_title_missing_carrier_num"
+                    android:prompt="@string/prompt_missing_carrier_num_spinner" / -->
+                <TextView
+                    android:id="@+id/end_lot_strip_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginTop="6dip"
+                    android:text="@string/strip_number" />
+
+                <EditText
+                    android:id="@+id/end_lot_strip_number_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginLeft="4dip"
+                    android:layout_toRightOf="@id/end_lot_strip_number" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip"
+                android:background="#004080" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_current_Pp_info" />
+
+            <LinearLayout
+                android:id="@+id/end_lot_pp_assignment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip"
+                android:background="#004080" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/end_lot_end_butt"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_layout"
+                    android:text="@string/button_end"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/end_lot_add_pp_butt"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_layout"
+                    android:text="@string/button_add_pp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/end_lot_reject_butt"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_layout"
+                    android:text="@string/button_alot_reject"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/end_lot_cancel_butt"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_layout"
+                    android:text="@string/button_cancel"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

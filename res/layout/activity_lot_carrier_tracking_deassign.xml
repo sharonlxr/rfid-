@@ -1,0 +1,53 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LotCarrierTrackingDeassignActivity" >
+
+    <fragment
+        android:id="@+id/lot_carrier_tracking_deassign_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/lot_carrier_tracking_deassign_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/lot_carrier_tracking_deassign_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <Button
+                android:id="@+id/lot_carrier_tracking_deassign_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_done" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/lot_carrier_tracking_deassign_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/lot_carrier_tracking_deassign_ll1"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:id="@+id/lot_carrier_tracking_deassign_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</merge>

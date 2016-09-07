@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tag_name">标签名</string>
+    <string name="title_alot_number">物料号</string>
+    <string name="button_scan_assign">扫描新标签做加载</string>
+    <string name="button_scan_deassign">扫描新标签做卸载</string>
+    <string name="button_deassign"><b>删除弹夹</b></string>
+    <string name="deassign"><b>解绑</b></string>
+    <string name="button_deassign_input"><b>删除上料弹夹</b></string>
+    <string name="button_deassign_output"><b>删除下料弹夹</b></string>
+    <string name="button_alot_inquiry">查询物料</string>
+    <string name="button_alot_reject">拒料</string>
+    <string name="input_carrier_assign_carrier">输入弹夹名</string>
+    <string name="button_assign"><b>添加弹夹</b></string>
+    <string name="button_assign_input"><b>添加上料弹夹</b></string>
+    <string name="button_assign_output"><b>添加下料弹夹</b></string>
+    <string name="check_mag_start"><b>开始检查</b></string>
+    
+</resources>

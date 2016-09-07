@@ -1,0 +1,92 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <fragment
+        android:id="@+id/new_nfc_tag_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/new_nfc_tag_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/new_nfc_tag_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="5dip" />
+
+        <LinearLayout
+            android:id="@+id/new_nfc_tag_lot_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/new_nfc_tag_lot_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lot_number"
+                android:imeActionId="@+id/new_nfc_tag_search_t"
+                android:imeActionLabel="@string/button_assign"
+                android:imeOptions="actionGo" />
+            
+            <Button
+                android:id="@+id/new_nfc_tag_n7_scan_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="扫描lot条码"
+                android:visibility="gone" />
+            
+            <Spinner 
+                android:id="@+id/new_nfc_tag_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <Button
+                    android:id="@+id/new_nfc_tag_assign"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_assign" />
+                <Button
+                    android:id="@+id/new_nfc_tag_assign_input"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_assign_input"
+                    android:visibility="gone" />
+                <Button
+                    android:id="@+id/new_nfc_tag_assign_output"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_assign_output"
+                    android:visibility="gone" />
+                
+                <Button 
+                    android:id="@+id/new_nfc_tag_cancel"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_cancel" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,107 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ControlActivity" >
+
+    <fragment
+        android:id="@+id/control_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/control_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:id="@+id/control_load_status_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" 
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_data"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/bg_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/control_alot_number_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/control_load_status_2"
+            android:orientation="vertical" >
+<!-- 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/control_alot_number_input"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/tag_or_lot"
+                    android:imeActionId="@+id/search_t"
+                    android:imeActionLabel="@string/search"
+                    android:imeOptions="actionGo" />
+
+                <Button
+                    android:id="@+id/control_n7_scan_barcode"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scan_barcode"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/control_alot_number_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/control_instr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="按F1扫描条码"
+                android:visibility="gone" />
+ -->
+
+			<fragment
+		        android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+		        android:id="@+id/control_tb_fragment"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/control_mach_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/control_alot_number_ll"
+            android:columnWidth="120dp"
+            android:gravity="center"
+            android:horizontalSpacing="20dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dp" />
+    </RelativeLayout>
+
+</merge>

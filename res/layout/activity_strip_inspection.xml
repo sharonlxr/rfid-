@@ -1,0 +1,179 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StripInspectionActivity" >
+
+    <fragment
+        android:id="@+id/si_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/si_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/si_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <fragment
+                android:id="@+id/si_tb_fragment"
+                android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/si_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/si_ll1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/si_scan_assign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_blue"
+                    android:text="@string/button_assign"
+                    android:textColor="@color/bg_white" />
+                
+                <Button
+                    android:id="@+id/si_scan_input_assign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_blue"
+                    android:text="@string/button_assign_input"
+                    android:textColor="@color/bg_white" />
+
+                <Button
+                    android:id="@+id/si_scan_output_assign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_blue"
+                    android:text="@string/button_assign_output"
+                    android:textColor="@color/bg_white" />
+
+                <Button
+                    android:id="@+id/si_scan_deassign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_green"
+                    android:text="@string/button_deassign"
+                    android:textColor="@color/bg_white" />
+
+                <Button
+                    android:id="@+id/si_scan_input_deassign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_green"
+                    android:text="@string/button_deassign_input"
+                    android:textColor="@color/bg_white" />
+
+                <Button
+                    android:id="@+id/si_scan_output_deassign_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/bg_green"
+                    android:text="@string/button_deassign_output"
+                    android:textColor="@color/bg_white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/si_ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/si_carrier_name_input"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/input_carrier_assign_carrier" />
+
+                <Button
+                    android:id="@+id/si_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_assign" />
+                <Button
+                    android:id="@+id/si_input_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_assign_input" />
+                <Button
+                    android:id="@+id/si_output_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_assign_output" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/si_ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/si_ll5"
+            android:layout_below="@id/si_ll3"
+            android:layout_margin="10dp" >
+
+            <LinearLayout
+                android:id="@+id/si_assigned_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</merge>

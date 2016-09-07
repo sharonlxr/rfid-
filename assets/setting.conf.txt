@@ -1,0 +1,5 @@
+env=prod
+carrier_assign_in_out=N
+manual_deassign=N
+message_filter=Y
+baud=9600

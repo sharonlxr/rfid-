@@ -1,0 +1,117 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CheckMagazineActivity" >
+
+    <fragment
+        android:id="@+id/check_mag_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/check_mag_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/check_mag_ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+<!-- 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/check_mag_lot"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/check_mag_input"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/tag_or_lot"
+                    android:imeActionId="@+id/check_mag_search_t"
+                    android:imeActionLabel="@string/search"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/check_mag_n7_scan_barcode"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scan_barcode"
+                    android:visibility="gone" />
+            </LinearLayout>
+ -->
+            <fragment
+		        android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+		        android:id="@+id/check_mag_tb_fragment"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/check_mag_ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dip" >
+
+                <Button
+                    android:id="@+id/check_mag_check_flag"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/bg_blue"
+                    android:text="@string/check_mag_start"
+                    android:textColor="@color/bg_white"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/check_mag_sta"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/check_mag_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/check_mag_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</merge>

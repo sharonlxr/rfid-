@@ -1,0 +1,133 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DivLotActivity" >
+
+    <LinearLayout
+        android:id="@+id/check_div_load_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/check_div_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/loading_data"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/check_div_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/check_div_ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <fragment
+		        android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+		        android:id="@+id/check_div_tb_fragment"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/check_div_ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="102dp"
+                android:orientation="horizontal"
+                android:padding="6dip" >
+
+                <Button
+                    android:id="@+id/check_div_check_flag"
+                    android:layout_width="0dip"
+                    android:layout_height="102dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/bg_blue"
+                    android:text="@string/check_mag_start"
+                    android:textColor="@color/bg_white"
+                    android:visibility="invisible" 
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/check_div_sta"
+                    android:layout_width="0dip"
+                    android:layout_height="102dp"
+                    android:layout_weight="1" 
+                    android:textSize="20sp">
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/check_div_ll_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                 android:id="@+id/div_lot_location"
+                 android:layout_width="match_parent"
+                 android:layout_height="86dp"
+                 android:gravity="center"
+                 android:textColor="@color/bg_green"
+                 android:textSize="30sp" >
+             </TextView>
+             <TextView
+                 android:id="@+id/div_string_location"
+                 android:layout_width="match_parent"
+                 android:layout_height="86dp"
+                 android:gravity="center"
+                 android:textColor="@color/bg_red"
+                 android:textSize="30sp" > 
+             </TextView>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/check_div_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/check_div_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</merge>

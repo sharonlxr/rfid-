@@ -1,0 +1,102 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RackMgmtActivity" >
+
+    <fragment
+        android:id="@+id/rack_mgmt_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/rack_mgmt_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/rack_mgmt_tb_fragment"
+            android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#004080" />
+        
+        <!-- TextView
+            android:id="@+id/rack_mgmt_rack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dip"
+            android:textColor="#004080"
+            android:textSize="20sp" /-->
+
+        <TextView
+            android:id="@+id/rack_mgmt_alot_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dip"
+            android:textColor="#004080"
+            android:textSize="20sp" />
+            
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#004080" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dip" >
+
+            <Button
+                android:id="@+id/button_scan_rack_in"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_scan_rack_in" />
+
+            <Button
+                android:id="@+id/button_scan_rack_out"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_scan_rack_out" />
+        </LinearLayout>
+
+        <!-- LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:padding="8dip"
+                android:text="@string/button_all"
+                android:textColor="#004080"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/rack_mgmt_select_all_cb"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="8dip" />
+        </LinearLayout -->
+
+        <LinearLayout
+            android:id="@+id/rack_mgmt_assigned_carriers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+</merge>

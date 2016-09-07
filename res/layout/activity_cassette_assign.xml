@@ -1,0 +1,209 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CassetteAssignActivity" >
+
+    <fragment
+        android:id="@+id/cassette_assign_load_status"
+        android:name="com.fsl.cimei.rfid.DataLoadStatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/cassette_assign_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/cassette_assign_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <fragment
+                android:id="@+id/cassette_assign_tb_fragment"
+                android:name="com.fsl.cimei.rfid.TagBarcodeInputFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/cassette_assign_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cassette_assign_ll1"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="6dp" >
+	
+	            <TextView
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/wafer_lot_number"
+	                android:textColor="@color/bg_blue"
+	                android:textSize="18sp" />
+	
+	            <TextView
+	                android:id="@+id/cassette_assign_wafer_lot_number"
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textSize="18sp" />
+	        </LinearLayout>
+	        
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:background="@color/line_gray" />
+            
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="6dp" >
+	
+	            <TextView
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/device_number"
+	                android:textColor="@color/bg_blue"
+	                android:textSize="18sp" />
+	
+	            <TextView
+	                android:id="@+id/cassette_assign_devc_number"
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textSize="18sp" />
+	        </LinearLayout>
+	        
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:background="@color/line_gray" />
+            
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="6dp" >
+	
+	            <TextView
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/step_name"
+	                android:textColor="@color/bg_blue"
+	                android:textSize="18sp" />
+	
+	            <TextView
+	                android:id="@+id/cassette_assign_step_name"
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textSize="18sp" />
+	        </LinearLayout>
+	        
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:background="@color/line_gray" />
+            
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="6dp" >
+	
+	            <TextView
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/actual_wafer_lot"
+	                android:textColor="@color/bg_blue"
+	                android:textSize="18sp" />
+	
+	            <TextView
+	                android:id="@+id/cassette_assign_actual_wafer_lot"
+	                android:layout_width="0dip"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textSize="18sp" />
+	        </LinearLayout>
+	        
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dip"
+	            android:background="@color/line_gray" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/cassette_assign_ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#004080" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/cassette_assign_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_submit" />
+                <Button
+                    android:id="@+id/cassette_assign_clear"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/clear" />
+                <Button
+                    android:id="@+id/cassette_assign_exit"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/exit" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <ScrollView
+            android:id="@+id/cassette_assign_ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cassette_assign_ll3"
+            android:layout_above="@id/cassette_assign_ll5"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp" >
+
+            <LinearLayout
+                android:id="@+id/cassette_assign_carrier_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+	</RelativeLayout>
+</merge>

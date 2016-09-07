@@ -1,0 +1,155 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="2000"
+        android:showAsAction="never"
+        android:title="@string/action_logout"/>
+    <item
+        android:id="@+id/action_lot_inquiry"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_lot_inquiry"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_carrier_assign"
+        android:orderInCategory="200"
+        android:title="@string/title_activity_carrier_assign"
+        android:showAsAction="never" />
+    <!-- item
+        android:id="@+id/action_in_out_carrier_assign"
+        android:orderInCategory="210"
+        android:title="@string/title_activity_in_out_carrier_assignment"
+        android:showAsAction="never" / -->
+    <item
+        android:id="@+id/action_check_magazine"
+        android:orderInCategory="210"
+        android:title="@string/title_activity_check_magazine"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_div_lot"
+        android:orderInCategory="220"
+        android:title="@string/title_activity_div_lot"
+        android:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_rej"
+        android:orderInCategory="300"
+        android:title="@string/title_activity_rej"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_op_shift_mach_assign"
+        android:orderInCategory="400"
+        android:title="@string/title_activity_op_shift_mach_assign"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_mach_rfid_function"
+        android:orderInCategory="500"
+        android:title="@string/title_activity_mach_rfid_function"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_cassette"
+        android:orderInCategory="560"
+        android:title="@string/title_activity_cassette"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_lot_carrier_tracking"
+        android:orderInCategory="570"
+        android:title="@string/title_activity_lot_carrier_tracking"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_lot_carrier_hist"
+        android:orderInCategory="580"
+        android:title="@string/title_activity_lot_carrier_hist"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_lot_carrier_report"
+        android:orderInCategory="590"
+        android:title="@string/title_activity_lot_carrier_report"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_rack_mgmt"
+        android:orderInCategory="600"
+        android:title="@string/title_activity_rack_mgmt"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_rack_lot_mgmt"
+        android:orderInCategory="610"
+        android:title="@string/title_activity_lot_rack_mgmt"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_pass_window"
+        android:orderInCategory="620"
+        android:title="@string/title_activity_pass_window"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_lot_pass_window"
+        android:orderInCategory="630"
+        android:title="@string/title_activity_lot_pass_window"
+        android:showAsAction="never" />
+    <!-- item
+        android:id="@+id/action_piece_part_load"
+        android:orderInCategory="700"
+        android:title="@string/title_activity_piece_part_load"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_piece_part_unload"
+        android:orderInCategory="800"
+        android:title="@string/title_activity_piece_part_unload"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_lot_start"
+        android:orderInCategory="900"
+        android:title="@string/title_activity_lot_start"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_emt_log"
+        android:orderInCategory="1000"
+        android:title="@string/title_activity_emt_log"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_test"
+        android:orderInCategory="1100"
+        android:title="@string/title_activity_test"
+        android:showAsAction="never" / -->
+    <item
+        android:id="@+id/action_about_app"
+        android:orderInCategory="1300"
+        android:title="@string/title_activity_app_info"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_setting"
+        android:orderInCategory="1400"
+        android:title="@string/title_activity_setting"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="2100"
+        android:title="@string/exit"
+        android:showAsAction="never" />
+    <item 
+        android:id="@+id/action_end_lot"
+        android:orderInCategory="950"
+        android:title="@string/title_activity_end_lot"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_end_lot_on_mach"
+        android:orderInCategory="960"
+        android:title="@string/title_activity_end_lot_on_mach"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_rej_mag"
+        android:orderInCategory="980"
+        android:title="@string/title_activity_rej_mag"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_si"
+        android:orderInCategory="970"
+        android:title="@string/title_activity_strip_inspection"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_alarm_unset"
+        android:orderInCategory="990"
+        android:title="@string/title_activity_alarm_unset"
+        android:showAsAction="never"
+        android:visible="false" />
+</menu>

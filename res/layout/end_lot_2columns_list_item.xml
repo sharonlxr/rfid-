@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 06/Feb/2015: create a new layout format with 2 columns, for mach and carrier listviews, to replace the old ones. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <TextView 
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/end_lot_item_2cols_1st_col"
+	    android:textSize="20sp"
+    	android:padding="8dip" />
+    
+    <TextView 
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/end_lot_item_2cols_2nd_col"
+        android:textSize="20sp"
+		android:padding="8dip" />
+    
+</LinearLayout>

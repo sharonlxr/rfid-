@@ -1,0 +1,109 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3174), pid=1500, tid=9652
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) Client VM (16.3-b01 mixed mode windows-x86 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01579400):  JavaThread "Unknown thread" [_thread_in_vm, id=9652, stack(0x003a0000,0x003f0000)]
+
+Stack: [0x003a0000,0x003f0000],  sp=0x003ef880,  free space=13e003ef890k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1f4180]
+V  [jvm.dll+0xa1e29]
+V  [jvm.dll+0x74a41]
+V  [jvm.dll+0x760e4]
+V  [jvm.dll+0x1c26a5]
+V  [jvm.dll+0x1c2ddd]
+V  [jvm.dll+0x1c3195]
+V  [jvm.dll+0x1c31db]
+V  [jvm.dll+0x1c3302]
+V  [jvm.dll+0x1c337a]
+V  [jvm.dll+0x1c382d]
+V  [jvm.dll+0x1c3c32]
+V  [jvm.dll+0x1e40b3]
+V  [jvm.dll+0x1e448c]
+V  [jvm.dll+0xd89c1]
+V  [jvm.dll+0x1ddcd8]
+V  [jvm.dll+0x102e10]
+C  [javaw.exe+0x1657]
+C  [javaw.exe+0x1e2c]
+C  [javaw.exe+0x8614]
+C  [kernel32.dll+0x4ee1c]
+C  [ntdll.dll+0x6399b]
+C  [ntdll.dll+0x6396e]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x01579400 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9652, stack(0x003a0000,0x003f0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jdk1.6.0_20\bin\javaw.exe
+0x77300000 - 0x77441000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75a20000 - 0x75af4000 	C:\Windows\system32\kernel32.dll
+0x75470000 - 0x754bb000 	C:\Windows\system32\KERNELBASE.dll
+0x75160000 - 0x751ce000 	C:\Windows\System32\SYSFER.DLL
+0x75b80000 - 0x75c20000 	C:\Windows\system32\ADVAPI32.dll
+0x75830000 - 0x758dc000 	C:\Windows\system32\msvcrt.dll
+0x76e90000 - 0x76ea9000 	C:\Windows\SYSTEM32\sechost.dll
+0x76eb0000 - 0x76f52000 	C:\Windows\system32\RPCRT4.dll
+0x77470000 - 0x77539000 	C:\Windows\system32\USER32.dll
+0x770d0000 - 0x7711e000 	C:\Windows\system32\GDI32.dll
+0x77450000 - 0x7745a000 	C:\Windows\system32\LPK.dll
+0x77030000 - 0x770cd000 	C:\Windows\system32\USP10.dll
+0x76b80000 - 0x76b9f000 	C:\Windows\system32\IMM32.DLL
+0x76ab0000 - 0x76b7c000 	C:\Windows\system32\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db47000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\client\jvm.dll
+0x73870000 - 0x738a2000 	C:\Windows\system32\WINMM.dll
+0x751d0000 - 0x7521c000 	C:\Windows\system32\apphelp.dll
+0x6d860000 - 0x6d86c000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\java.dll
+0x6d340000 - 0x6d348000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\hpi.dll
+0x77540000 - 0x77545000 	C:\Windows\system32\PSAPI.DLL
+0x6d8a0000 - 0x6d8af000 	C:\Program Files\Java\jdk1.6.0_20\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath:C:\Users\B33021\AppData\Local\Android\sdk\platforms\android-19\android.jar 
+java_command: com.fsl.cimei.rfid.CommonUtility
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_20
+PATH=C:/Program Files/Java/jdk1.6.0_20/bin/../jre/bin/client;C:/Program Files/Java/jdk1.6.0_20/bin/../jre/bin;C:/Program Files/Java/jdk1.6.0_20/bin/../jre/lib/i386;D:\material\groovy-2.0.5\bin;C:\Program Files\Java\jdk1.6.0_20\bin;C:\oracle\ora92\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files\RSA SecurID Token Common;C:\Windows\system32;C:\Windows;C:\Windows\S;C:\genesis\Enablers\Python;C:\genesis\Product\Cmds;C:\genesis\Product\Lib;C:\genesis\Product\Pic\bin;C:\genesis\Enablers\hume\bin;;c:\genesis\product\..\enablers\hume\bin;C:\Program Files\TortoiseSVN\bin;D:\eclipse;
+USERNAME=B33021
+DISPLAY=B33021-01:0.0
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 3318680k(1138152k free), swap 6635616k(2642812k free)
+
+vm_info: Java HotSpot(TM) Client VM (16.3-b01) for windows-x86 JRE (1.6.0_20-b02), built on Apr 12 2010 13:52:23 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Thu May 21 11:05:37 2015
+elapsed time: 0 seconds
+

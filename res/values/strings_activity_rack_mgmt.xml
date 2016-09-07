@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="title_activity_rack_mgmt">Rack 管理</string>
+    <string name="button_scan_rack_in">放入物料</string>
+    <string name="button_scan_rack_out">取出物料</string>
+    <string name="button_all">全部</string>
+    
+</resources>

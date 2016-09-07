@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_lot_start">开批</string>
+    <string name="mach_assign">机台使用</string>
+    <string name="piece_part_device">Piece Part Device</string>
+    <string name="currently_loaded_to_mach">当前已加载到机台的 Containers/Piece part</string>
+    <string name="currently_unload_from_mach">已从当前机台卸载的 Containers/Piece part</string>
+    <string name="mach">机台</string>
+    <string name="button_select_mach">选择机台</string>
+    <string name="button_start">开批</string>
+    <string name="button_add_pp">添加 PP</string>
+    <string name="spv_general_instruction">SPV General Instruction</string>
+    <string name="acknowledge">Acknowledge</string>
+    <string name="material_type">材料类型</string>
+    <string name="floor_life_expire_date">Floor Life 失效时间</string>
+    <string name="shelf_life_expiry_date">Shelf Life 失效时间</string>
+    <string name="bake_life_expiry_date">Bake Life 失效时间</string>
+    <string name="status">状态</string>
+    <string name="title_activity_spv_memo_acknowledge">SPV / Memo</string>
+    <string name="title_activity_lot_start_select_mach_activity">选择机台</string>
+    <string name="pp_matl_type">Piece Part 材料类型</string>
+    <string name="container_recv_date">Container 接收时间</string>
+    <string name="container_open_date">Container 打开时间</string>
+    <string name="current_qty">当前数量</string>
+    <string name="used_up">全部使用</string>
+    <string name="unload">卸载</string>
+    
+</resources>
